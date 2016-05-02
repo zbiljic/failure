@@ -8,17 +8,17 @@ It's decoupled from any JSON library, but contains a separate module for Jackson
 ## Dependency
 
 ```xml
-    <dependency>
-        <groupId>com.zbiljic</groupId>
-        <artifactId>failure</artifactId>
-        <version>${failure.version}</version>
-    </dependency>
+<dependency>
+    <groupId>com.zbiljic</groupId>
+    <artifactId>failure</artifactId>
+    <version>${failure.version}</version>
+</dependency>
 
-    <dependency>
-        <groupId>com.zbiljic</groupId>
-        <artifactId>jackson-datatype-failure</artifactId>
-        <version>${failure.version}</version>
-    </dependency>
+<dependency>
+    <groupId>com.zbiljic</groupId>
+    <artifactId>jackson-datatype-failure</artifactId>
+    <version>${failure.version}</version>
+</dependency>
 ```
 
 ## Usage
