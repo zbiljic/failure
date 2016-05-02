@@ -66,6 +66,7 @@
 
   <modules>
     <module>failure</module>
+    <module>jackson-datatype-failure</module>
   </modules>
 
   <properties>
@@ -96,6 +97,11 @@
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
+        <version>${dep.slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-nop</artifactId>
         <version>${dep.slf4j.version}</version>
       </dependency>
 

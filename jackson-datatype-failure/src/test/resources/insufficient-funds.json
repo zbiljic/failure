@@ -1,0 +1,6 @@
+{
+  "service": "FUNDS",
+  "title": "Insufficient funds",
+  "status": 422,
+  "code": 0
+}

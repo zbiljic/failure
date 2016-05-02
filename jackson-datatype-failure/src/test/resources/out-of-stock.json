@@ -1,0 +1,7 @@
+{
+  "service": "EXAMPLE",
+  "title": "Out of Stock",
+  "status": 422,
+  "code": 0,
+  "detail": "Item B00027Y5QG is no longer available"
+}

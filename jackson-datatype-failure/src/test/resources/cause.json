@@ -1,0 +1,12 @@
+{
+  "service": "EXAMPLE",
+  "title": "Preauthorization Failed",
+  "status": 422,
+  "code": 0,
+  "cause": {
+    "service": "EXAMPLE",
+    "title": "Expired Credit Card",
+    "status": 422,
+    "detail": "Credit card is expired as of 2015-09-16T00:00:00Z"
+  }
+}
