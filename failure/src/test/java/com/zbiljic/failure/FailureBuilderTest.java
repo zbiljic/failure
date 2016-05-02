@@ -81,7 +81,7 @@ public class FailureBuilderTest extends AbstractFailureTest {
   @Test(expectedExceptions = NullPointerException.class)
   public void testThrowOnMissingStatus() throws Exception {
     Failure.builder(SERVICE)
-        .withTitle("Not found")
+        .withTitle("Not Found")
         .build();
   }
 }

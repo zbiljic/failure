@@ -19,7 +19,7 @@ public class DefaultFailureTest extends AbstractFailureTest {
 
   @Test(expectedExceptions = NullPointerException.class)
   public void testShouldThrowOnNullService() throws Exception {
-    throw new DefaultFailure(null, "Not found", HttpStatus.NOT_FOUND, 0, empty(), empty());
+    throw new DefaultFailure(null, "Not Found", HttpStatus.NOT_FOUND, 0, empty(), empty());
   }
 
   @Test(expectedExceptions = NullPointerException.class)
@@ -29,30 +29,30 @@ public class DefaultFailureTest extends AbstractFailureTest {
 
   @Test(expectedExceptions = NullPointerException.class)
   public void testShouldThrowOnNullStatus() throws Exception {
-    throw new DefaultFailure(SERVICE, "Not found", null, 0, empty(), empty());
+    throw new DefaultFailure(SERVICE, "Not Found", null, 0, empty(), empty());
   }
 
   @Test(expectedExceptions = NullPointerException.class)
   public void testShouldThrowOnNullDetail() throws Exception {
-    throw new DefaultFailure(SERVICE, "Not found", HttpStatus.NOT_FOUND, 0, null, empty());
+    throw new DefaultFailure(SERVICE, "Not Found", HttpStatus.NOT_FOUND, 0, null, empty());
   }
 
   @Test(expectedExceptions = NullPointerException.class)
   public void testShouldThrowOnNullInstance() throws Exception {
-    throw new DefaultFailure(SERVICE, "Not found", HttpStatus.NOT_FOUND, 0, empty(), null);
+    throw new DefaultFailure(SERVICE, "Not Found", HttpStatus.NOT_FOUND, 0, empty(), null);
   }
 
   @Test
   public void testShouldImplementProblem() throws Exception {
     final Failure failure = new DefaultFailure(SERVICE,
-        "Not found",
+        "Not Found",
         HttpStatus.NOT_FOUND,
         0,
         Optional.of("Resource could not be found"),
         Optional.of("fail_123"));
 
     assertThat(failure.getService(), is(SERVICE));
-    assertThat(failure.getTitle(), is("Not found"));
+    assertThat(failure.getTitle(), is("Not Found"));
     assertThat(failure.getStatus(), equalTo(HttpStatus.NOT_FOUND.value()));
     assertThat(failure.getCode(), equalTo(0));
     assertThat(failure.getDetail(), notNullValue());
