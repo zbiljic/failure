@@ -1,5 +1,7 @@
 package com.zbiljic.failure;
 
+import com.zbiljic.failure.http.HttpStatus;
+
 import java.util.Objects;
 import java.util.Optional;
 
@@ -59,6 +61,18 @@ public interface Failure {
         .withStatus(failure.getStatus())
         .withCode(failure.getCode())
         .withTitle(failure.getTitle());
+  }
+
+  static ThrowableFailure valueOf(final String service, final HttpStatus status) {
+    return GenericFailures.create(service, status).build();
+  }
+
+  static ThrowableFailure valueOf(final String service, final HttpStatus status, final String detail) {
+    return GenericFailures.create(service, status).withDetail(detail).build();
+  }
+
+  static ThrowableFailure valueOf(final String service, final HttpStatus status, final String detail, final String instance) {
+    return GenericFailures.create(service, status).withDetail(detail).withInstance(instance).build();
   }
 
   /**
